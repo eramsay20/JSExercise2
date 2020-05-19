@@ -92,6 +92,53 @@ calculate (2,4,"add");
     values are falsey)
     b. Return false if the number is not undefined but is less than 0.
     c. For all other cases, return true.
-    Stretch Requirements:
+    
+*/
+// Q3 ANSWER BELOW //
+let a = "";
+let b = "";
+let x = 1;
+
+function validate(a, b, x) {
+    if (a ==="" || b === ""){
+        return false;
+    }
+    else if (x !== "" && x < 0) {
+        return false;
+    }
+    else {
+        return true;
+    }
+}
+validate(" Yes", "No", 5);
+// Q3 ANSWER ABOVE //
+
+
+
+
+
+
+/*
+Stretch Requirements:
 1. Create a function that, given a number, returns true if it can be reached by the Fibonacci sequence, else return false.
 */ 
+x = 1;
+function isPerfectSquare(x) {
+    s = Math.sqrt(x);
+    if (s * s == x){
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+
+// A number is Fibonacci if and only if one or both of 
+// (5*n^2 + 4) or (5*n^2 – 4) is a perfect square (Source: Wiki).
+y = 1;
+function isFibNum(y) {
+    return isPerfectSquare (5 * y*y + 4) || isPerfectSquare(5 * y*y - 4);
+}
+
+isFibNum(12);
+    
