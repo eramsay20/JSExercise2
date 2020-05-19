@@ -121,7 +121,7 @@ validate(" Yes", "No", 5);
 /*
 Stretch Requirements:
 1. Create a function that, given a number, returns true if it can be reached by the Fibonacci sequence, else return false.
-*/ 
+
 x = 1;
 function isPerfectSquare(x) {
     s = Math.sqrt(x);
@@ -132,13 +132,23 @@ function isPerfectSquare(x) {
         return false;
     }
 }
-
+*/
 // A number is Fibonacci if and only if one or both of 
 // (5*n^2 + 4) or (5*n^2 – 4) is a perfect square (Source: Wiki).
-y = 1;
-function isFibNum(y) {
-    return isPerfectSquare (5 * y*y + 4) || isPerfectSquare(5 * y*y - 4);
+
+function isFibNum(x) {
+   if(Math.sqrt(5*x*x-4) % 1 == 0 || Math.sqrt(5*x*x+4) % 1 == 0){
+       console.log(`The number ${x} is a Fibonacci number!`)
+    return true;
+   }
+   else {
+    console.log(`The number ${x} is not a Fibonacci number.`)
+       return false;
+   }
+    
 }
 
-isFibNum(12);
-    
+isFibNum(12); // should return false
+isFibNum(13); // should return true
+
+// STRETCH ANSWER SOLUTION ABOVE // 
