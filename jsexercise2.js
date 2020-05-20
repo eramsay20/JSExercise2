@@ -77,7 +77,10 @@ function calculate(x, y, z) {
             break;
     }
 }
-calculate (2,4,"add");
+console.log(calculate (2,4,"add"));
+console.log(calculate (2,4,"subtract"));
+console.log(calculate (2,4,"multiply"));
+console.log(calculate (2,4,"divide"));
 
 // Q2 ANSWER COMPLETE //
 
